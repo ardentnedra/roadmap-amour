@@ -3,8 +3,8 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 import Sortable from 'https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/+esm';
 
 // Supabase config
-const supabaseUrl = 'https://rpmwpecktjjmvkhofesa.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJwbXdwZWNrdGpqbXZraG9mZXNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMyNjU2MzQsImV4cCI6MjA1ODg0MTYzNH0.0q2u94QoPPnh-xXCgYV__zezrcviot3rDUT0IY7sC7o';
+const supabaseUrl = '...';
+const supabaseKey = '...';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // DOM Elements
