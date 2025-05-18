@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist Tana</title>
+
+  <!-- Ajouter meta description pour SEO -->
+  <meta name="description" content="Wishlist personnalisée de Tana pour suivre ses objectifs">
+
+  <!-- Remplacer le bloc des favicons -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+
+  <!-- Supprimer les préchargements de polices locales -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Optimisation des polices -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" as="style">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+
+  <!-- Autres ressources -->
+  <link rel="prefetch" href="ding-sfx-330333.mp3">
+  <link rel="prefetch" href="swoosh-sound-effect-for-fight-scenes-or-transitions-1-149889.mp3">
+  <link rel="preload" href="styles.css" as="style">
+  
+  <!-- Style critique inline -->
+  <style>
+    .todo-list { 
+      min-height: 300px; /* Espace réservé pour la liste */
+    }
+    .progress-container {
+      min-height: 60px;
+    }
+    #addTodoForm {
+      min-height: 100px;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  
+  <!-- Supprimer le preload du favicon -->
+  <!-- <link rel="preload" as="image" href="/favicon.webp"> -->
+  
+  <script type="module" src="script.js" defer></script>
+
+  <!-- Script pour restaurer la visibilité -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.body.style.visibility = 'visible';
+    });
+  </script>
+
+  <!-- Optimisation des polices -->
+  <link rel="preload" href="fonts.css" as="style">
+  <link rel="stylesheet" href="fonts.css">
+  
+  <!-- Suppression du chargement Google Fonts -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="themes.css">
+</head>
+<body>
+  <header>
+    <h1>💄 Wishlist Tana</h1>
+    
+    <div class="theme-switcher">
+      <p>🎨 Thème du site :</p>
+      <div class="theme-buttons">
+        <button class="theme-btn" data-theme="theme-rose">🌸 Rose</button>
+        <button class="theme-btn" data-theme="theme-nuit">🌙 Nuit</button>
+        <button class="theme-btn" data-theme="theme-bleu">💧 Bleu</button>
+        <button class="theme-btn" data-theme="theme-clair">☀️ Clair</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="controls">
+<div class="filters">
+  <button class="filter-btn" data-category="💄 Looks">💄 Looks</button>
+  <button class="filter-btn" data-category="🧠 Attitude">🧠 Attitude</button>
+  <button class="filter-btn" data-category="🎮 Jeux">🎮 Jeux</button>
+  <button class="filter-btn" data-category="🌍 Public">🌍 Public</button>
+  <button class="filter-btn" data-category="🔒 Privé">🔒 Privé</button>
+  <button class="filter-btn" data-category="📷 Contenu">📷 Contenu</button>
+</div>
+
+    <!-- Commenté/Supprimé le bouton de tri -->
+    <!-- <button id="sortChecked">📌 Cochés en haut</button> -->
+  </section>
+
+  <div class="progress-container">
+    <div class="progress-info">
+      <span id="progress-text">0/0 objectifs accomplis</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+  </div>
+
+  <main>
+  <ul id="todoList" class="todo-list" role="list"></ul>
+</main>
+
+  <form id="addTodoForm">
+    <div class="form-group">
+      <label for="newTitle">Nouvelle idée</label>
+      <input type="text" id="newTitle" placeholder="Ajouter une nouvelle idée..." required />
+    </div>
+    
+    <div class="form-group">
+      <label for="newCategory">Catégorie</label>
+      <select id="newCategory" aria-label="Sélectionner une catégorie">
+        <option value="💄 Looks">💄 Looks</option>
+        <option value="🧠 Attitude">🧠 Attitude</option>
+        <option value="🎮 Jeux">🎮 Jeux</option>
+        <option value="🌍 Public">🌍 Public</option>
+        <option value="🔒 Privé">🔒 Privé</option>
+        <option value="📷 Contenu">📷 Contenu</option>
+      </select>
+    </div>
+  
+    <button type="submit" aria-label="Ajouter un nouvel objectif">➕ Ajouter</button>
+  </form>
+
+  <footer>
+    <p>✨ En duo avec Snoopy 💙</p>
+  </footer>
+  
+<button id="scrollToTopBtn" title="Remonter en haut">
+    <img src="arrow.webp" alt="Remonter" width="20" height="20" />
+</button>
+
+  
+  <script async src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+  <audio id="checkSound" src="ding-sfx-330333.mp3" preload="auto"></audio>
+  <audio id="deleteSound" src="swoosh-sound-effect-for-fight-scenes-or-transitions-1-149889.mp3" preload="auto"></audio>
+</body>
+</html>

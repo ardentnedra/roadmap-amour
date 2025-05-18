@@ -1,0 +1,60 @@
+:root {
+  --transition-duration: 0.3s;
+}
+
+/* Ajout du bouton scroll dans les transitions de thème */
+body, .todo-card, button, input, select, .theme-button, #scrollToTopBtn {
+  transition: background-color var(--transition-duration) ease, 
+              color var(--transition-duration) ease,
+              border-color var(--transition-duration) ease;
+}
+
+/* Thème par défaut (light) */
+:root {
+  --bg-color: #f9fafb;
+  --text-color: #222;
+  --text-secondary: #555555;
+  --primary-color: #007aff;
+  --accent-color: #ff6b81;
+  --todo-bg: white;
+}
+
+/* Thème rose */
+.theme-rose {
+  --bg-color: #ffe4e1;
+  --text-color: #4a2c2a;
+  --accent-color: #ff6b81;
+  --todo-bg: #fff0f5;
+  --text-secondary: #6d4f4d;
+  --primary-color: #ff6b81;
+}
+
+/* Thème nuit */
+.theme-nuit {
+  --bg-color: #0d1b2a;
+  --text-color: #fefefe;
+  --accent-color: #64ffda;
+  --todo-bg: #1b263b;
+  --text-secondary: #a0a0a0;
+  --primary-color: #64ffda;
+}
+
+/* Thème bleu */
+.theme-bleu {
+  --bg-color: #e0f7fa;
+  --text-color: #004d40;
+  --accent-color: #00bcd4;
+  --todo-bg: #b2ebf2;
+  --text-secondary: #00695c;
+  --primary-color: #00bcd4;
+}
+
+/* Thème clair */
+.theme-clair {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --accent-color: #8e44ad;
+  --todo-bg: #f2f2f2;
+  --text-secondary: #666666;
+  --primary-color: #8e44ad;
+}
